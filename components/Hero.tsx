@@ -54,9 +54,9 @@ export default function Hero() {
                     />
                 </div>
                 <div className="hero-text">
-                    <h1>Docker</h1>
+                    <h1>Easy Docker</h1>
                     <p className="hero-description">
-                        Empowering developers to build, share, and run applications anywhere with containerization technology
+                        A beginner's guide to understanding Docker in plain simple English.
                     </p>
                 </div>
             </div>

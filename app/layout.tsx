@@ -3,7 +3,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: "Docker - Containerization Platform",
+  title: "Docker - Bigginer's Guide",
   description: "Learn about Docker, the leading containerization platform that empowers developers to build, share, and run applications anywhere.",
 };
 

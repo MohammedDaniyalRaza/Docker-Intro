@@ -5,6 +5,26 @@ import Image from 'next/image';
 export default function Hero() {
     return (
         <section className="hero-section">
+            <div className="social-icons">
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+            </div>
+
             <div className="hero-content">
                 <div className="hero-logo">
                     <Image
@@ -33,8 +53,42 @@ export default function Hero() {
           );
           padding: 5rem 2rem 4rem;
           margin-bottom: 4rem;
-          box-shadow: var(--shadow-lg);
+          /* box-shadow usage removed as requested */
           position: relative;
+        }
+
+        .social-icons {
+          position: absolute;
+          top: 2rem;
+          right: 2rem; /* Positioned top right, adjusting for theme toggle if necessary, but request said top right */
+          display: flex;
+          gap: 1.5rem;
+          z-index: 10;
+        }
+
+        /* Adjust right position if theme toggle is also there. 
+           ThemeToggle is fixed at 2rem right. 
+           We should probably move these to the left of the theme toggle or below it.
+           However, standard top right usually means the corner.
+           Given ThemeToggle is fixed, maybe we put these next to it?
+           Let's put them at right: 6rem to avoid overlapping with the fixed ThemeToggle which is at right: 2rem.
+        */
+        .social-icons {
+          right: 6rem;
+        }
+
+        .social-icons a {
+          color: var(--foreground);
+          opacity: 0.7;
+          transition: opacity 0.2s ease, transform 0.2s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .social-icons a:hover {
+          opacity: 1;
+          transform: translateY(-2px);
         }
 
         .hero-content {
@@ -62,23 +116,36 @@ export default function Hero() {
         }
 
         .hero-text h1 {
-          color: white;
+          color: white; /* Title remains white as it is likely in the blue part */
           margin-bottom: 1rem;
           text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .hero-description {
-          color: rgba(255, 255, 255, 0.95);
+          /* Changed from fixed white to foreground color */
+          color: var(--foreground); 
           font-size: 1.125rem;
           max-width: 600px;
           line-height: 1.6;
-          text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          /* Removed text-shadow to make it cleaner for black text */
         }
 
         @media (max-width: 768px) {
           .hero-section {
             padding: 3rem 1.5rem 2.5rem;
             margin-bottom: 3rem;
+          }
+
+          .social-icons {
+             /* Adjust for mobile if needed */
+             top: 1.5rem;
+             right: 5rem; 
+             gap: 1rem;
+          }
+          
+          .social-icons svg {
+            width: 20px;
+            height: 20px;
           }
 
           .hero-content {

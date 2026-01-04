@@ -14,7 +14,7 @@ No heavy jargon, no complex diagrams (yet 😅) – just clear explanations with
 
 ## Live Site
 
-Check out the guide here: [Your deployed link, e.g., https:easydocker.vercel.app]
+Check out the guide here: [easydocker.vercel.app](https://easydocker.vercel.app)
 
 ## Why I Made This
 

@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BrandBlog — Next.js Blog Template
 
-## Getting Started
+A modern, frontend-only blog template built with Next.js, focused on polished UI/UX, accessibility, and a clean design language. This template uses Tailwind CSS and includes light/dark theme switching.
 
-First, run the development server:
+## Features ✅
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Mobile-first, responsive design
+- Smooth dark / light theme toggle (persisted in localStorage)
+- Homepage with blog list and cards
+- Individual blog pages with readable typography
+- Component-based structure for easy extension
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local development 🔧
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Install dependencies:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   npm install
 
-## Learn More
+2. Start dev server:
 
-To learn more about Next.js, take a look at the following resources:
+   npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open http://localhost:3000
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes 💡
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- This project is frontend-only and uses static dummy data in `data/posts.ts`.
+- The theme system is implemented via a small client-side provider that toggles the `dark` class on `document.documentElement`.

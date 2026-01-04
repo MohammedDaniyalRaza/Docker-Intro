@@ -7,7 +7,7 @@ export default function Hero() {
         <section className="hero-section">
             <div className="social-icons">
                 <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/muhammad-daniyal-aa26b22ba/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
@@ -20,7 +20,7 @@ export default function Hero() {
                     </svg>
                 </a>
                 <a
-                    href="https://github.com"
+                    href="https://github.com/MohammedDaniyalRaza"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
@@ -31,11 +31,11 @@ export default function Hero() {
                     </svg>
                 </a>
                 <a
-                    href="https://twitter.com"
+                    href="https://x.com/daniyalrazaqa"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="X (Twitter)"
-                    data-tooltip="Twitter"
+                    data-tooltip="X"
                 >
                     <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
                         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
